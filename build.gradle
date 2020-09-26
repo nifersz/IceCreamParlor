@@ -1,0 +1,44 @@
+buildscript {
+    ext {
+        androidCompileSdkVersion = 29
+        androidMinSdkVersion = 21
+        androidTargetSdkVersion = 29
+
+        android_appcompat_version = '1.2.0'
+        android_archcore_version = '2.1.0'
+        android_fragmentktx_version = '1.2.5'
+        constraint_layout_version = '2.0.1'
+        fix_unhandled_event_version = '1.0.1'
+        gradle_build_version = '4.0.1'
+        kotlin_version = '1.4.10'
+
+        libs = [
+                androidXappCompat: ('androidx.appcompat:appcompat:' + android_appcompat_version),
+                androidXarchCore: ('androidx.arch.core:core-common:' + android_archcore_version),
+                androidXfragment: ('androidx.fragment:fragment-ktx:' + android_fragmentktx_version),
+                constraintLayoutX: ('androidx.constraintlayout:constraintlayout:' + constraint_layout_version),
+                fixUnhandledEvent: ('com.github.DonaldDu:FixUnhandledEvent:' + fix_unhandled_event_version),
+                kotlin: ('org.jetbrains.kotlin:kotlin-stdlib-jdk7:' + kotlin_version)
+        ]
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_build_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
