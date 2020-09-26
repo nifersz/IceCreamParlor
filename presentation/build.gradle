@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -35,10 +36,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
-    androidExtensions {
-        experimental = true
-    }
 }
 
 dependencies {
@@ -51,7 +48,12 @@ dependencies {
     implementation libs.androidXarchCore
     implementation libs.androidXfragment
     implementation libs.constraintLayoutX
+    implementation libs.glide
     implementation libs.recyclerView
+    implementation libs.rxAndroid3
+    implementation libs.rxJava3
 
     debugImplementation libs.fixUnhandledEvent
+
+    kapt libs.glideCompiler
 }

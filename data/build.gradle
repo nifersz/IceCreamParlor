@@ -37,4 +37,9 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(':domain')
     implementation libs.kotlin
+
+    implementation libs.retrofit
+    implementation libs.retrofitGson
+    implementation libs.retrofitRxJava3Adapter
+    implementation libs.rxJava3
 }

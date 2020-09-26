@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="icecream.parlor">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".presentation.IceCreamParlorApp"
         android:allowBackup="true"
