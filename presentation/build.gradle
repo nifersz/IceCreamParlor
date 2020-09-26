@@ -35,6 +35,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
@@ -47,6 +51,7 @@ dependencies {
     implementation libs.androidXarchCore
     implementation libs.androidXfragment
     implementation libs.constraintLayoutX
+    implementation libs.recyclerView
 
     debugImplementation libs.fixUnhandledEvent
 }

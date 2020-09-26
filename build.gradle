@@ -11,6 +11,7 @@ buildscript {
         fix_unhandled_event_version = '1.0.1'
         gradle_build_version = '4.0.1'
         kotlin_version = '1.4.10'
+        recyclerview_version = '1.1.0'
 
         libs = [
                 androidXappCompat: ('androidx.appcompat:appcompat:' + android_appcompat_version),
@@ -18,7 +19,8 @@ buildscript {
                 androidXfragment: ('androidx.fragment:fragment-ktx:' + android_fragmentktx_version),
                 constraintLayoutX: ('androidx.constraintlayout:constraintlayout:' + constraint_layout_version),
                 fixUnhandledEvent: ('com.github.DonaldDu:FixUnhandledEvent:' + fix_unhandled_event_version),
-                kotlin: ('org.jetbrains.kotlin:kotlin-stdlib-jdk7:' + kotlin_version)
+                kotlin: ('org.jetbrains.kotlin:kotlin-stdlib-jdk7:' + kotlin_version),
+                recyclerView: ('androidx.recyclerview:recyclerview:' + recyclerview_version),
         ]
     }
     repositories {
